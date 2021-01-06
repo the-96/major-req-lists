@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for majors...">
+
+<ul id="myUL">
+{% for major in majors %}
+
+    <li><p><a href={{major.url}}>{{major.name}}</a></p></li>
+
+{% endfor %}</ul>
+{% endblock content %}

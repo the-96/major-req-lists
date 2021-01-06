@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for schools...">
+
+<ul id="myUL">
+{% for school in schools %}
+    <li><p><a href={{school.tag}}>{{school.name}}</a></p></li>
+{% endfor %}
+</ul>
+{% endblock content %}
